@@ -25,11 +25,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        imagesworker.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        scaledpixmap.cpp
 
 HEADERS += \
-        mainwindow.h
+        imagesworker.h \
+        mainwindow.h \
+        scaledpixmap.h
 
 FORMS += \
         mainwindow.ui
@@ -38,3 +42,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resource.qrc

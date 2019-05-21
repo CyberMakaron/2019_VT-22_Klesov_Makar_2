@@ -1,24 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>886</width>
+    <height>625</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>MainWindow</string>
+  <property name="windowTitle">
+   <string>View Images</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="ScaledPixmap" name="img_field" native="true"/>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QPushButton" name="previous_img">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icon/icons/back.png</normaloff>:/icon/icons/back.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Left</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="next_img">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icon/icons/next.png</normaloff>:/icon/icons/next.png</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Right</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>886</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="openFolder"/>
+    <addaction name="addShortcut"/>
+    <addaction name="Shortcut"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="openFolder"/>
+   <addaction name="addShortcut"/>
+   <addaction name="Shortcut"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="openFolder">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icon/icons/open.png</normaloff>:/icon/icons/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Указать папку</string>
+   </property>
+   <property name="toolTip">
+    <string>Указать папку с изображениями</string>
+   </property>
+  </action>
+  <action name="addShortcut">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icon/icons/add.png</normaloff>:/icon/icons/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Добавить в быстрый доступ</string>
+   </property>
+  </action>
+  <action name="Shortcut">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icon/icons/shortcut folder.png</normaloff>:/icon/icons/shortcut folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Быстрый доступ</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть изображения, добавленные в быстрый доступ</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
- <resources/>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ScaledPixmap</class>
+   <extends>QWidget</extends>
+   <header>scaledpixmap.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
