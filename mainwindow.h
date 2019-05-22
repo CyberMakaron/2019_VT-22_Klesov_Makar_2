@@ -4,7 +4,8 @@
 #include <QMainWindow>
 #include <QString>
 #include <QPixmap>
-#include "imagesworker.h"
+#include "dir_imagesworker.h"
+#include "shortcutworker.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,9 +27,17 @@ private slots:
 
     void on_next_img_clicked();
 
+    void on_addShortcut_triggered();
+
+    void on_Shortcut_triggered();
+
+    void on_removeShortcut_triggered();
+
 private:
     Ui::MainWindow *ui;
-    ImagesWorker im_w;
+    DirImagesWorker dir_img_w;
+    ShortcutWorker shortcut_w;
+    int mode;
 };
 
 #endif // MAINWINDOW_H

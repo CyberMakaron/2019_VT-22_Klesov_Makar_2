@@ -3,21 +3,21 @@
 
 #include <QString>
 #include <QDir>
-#include <QFileDialog>
 
-class ImagesWorker
-{
-    QString path;
+class ImagesWorker {
     QStringList images_list;
     int cur_img_num, img_num;
 public:
-    ImagesWorker(): path(), images_list(), cur_img_num(-1), img_num(0){}
-    void openDirectory();
-
+    ImagesWorker() : images_list(), cur_img_num(-1), img_num(0) {}
     int getImgNum();
-    int getCurrenrImgNum();
+    int getCurImgNum();
+    int& imgNum();
+    int& curImgNum();
+    QStringList& imagesList();
     QString getNext();
     QString getPrevious();
+    QString getFirst();
+    QString getCurrent();
 };
 
 #endif // IMAGESWORKER_H

@@ -79,6 +79,7 @@
     <addaction name="openFolder"/>
     <addaction name="addShortcut"/>
     <addaction name="Shortcut"/>
+    <addaction name="removeShortcut"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -92,6 +93,7 @@
    <addaction name="openFolder"/>
    <addaction name="addShortcut"/>
    <addaction name="Shortcut"/>
+   <addaction name="removeShortcut"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="openFolder">
@@ -125,6 +127,18 @@
    </property>
    <property name="toolTip">
     <string>Открыть изображения, добавленные в быстрый доступ</string>
+   </property>
+  </action>
+  <action name="removeShortcut">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/icon/icons/remove img.png</normaloff>:/icon/icons/remove img.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить из быстрого доступа</string>
+   </property>
+   <property name="toolTip">
+    <string>Удалить изображение из быстрого доступа</string>
    </property>
   </action>
  </widget>

@@ -25,15 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        dir_imagesworker.cpp \
         imagesworker.cpp \
         main.cpp \
         mainwindow.cpp \
-        scaledpixmap.cpp
+        scaledpixmap.cpp \
+        shortcutworker.cpp
 
 HEADERS += \
+        dir_imagesworker.h \
         imagesworker.h \
         mainwindow.h \
-        scaledpixmap.h
+        scaledpixmap.h \
+        shortcutworker.h
 
 FORMS += \
         mainwindow.ui
@@ -45,3 +49,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resource.qrc
+
+DISTFILES +=
